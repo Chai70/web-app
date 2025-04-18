@@ -1,0 +1,5 @@
+<template name="comp">
+  <view class="{{className}}">
+    <slot></slot>
+  </view>
+</template>
