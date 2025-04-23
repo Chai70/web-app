@@ -1,0 +1,280 @@
+.token-card {
+  background-color: #101926;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  
+  // 卡片头部
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    
+    .header-left {
+      display: flex;
+      align-items: center;
+      
+      .token-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        margin-right: 8px;
+      }
+      
+      .token-address {
+        font-size: 16px;
+        color: #999;
+      }
+      
+      .copy-button {
+        margin-left: 8px;
+        position: relative;
+        
+        .copy-icon {
+          color: #FFF;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+          
+          .copy-icon-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        
+        .copy-tooltip {
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #333;
+          color: #fff;
+          padding: 4px 8px;
+          border-radius: 4px;
+          font-size: 16px;
+          white-space: nowrap;
+          z-index: 10;
+        }
+      }
+    }
+    
+    .header-right {
+      display: flex;
+      gap: 10px;
+      
+      .action-button {
+        color: #999;
+      }
+    }
+  }
+  
+  // 卡片内容
+  .card-content {
+    padding: 12px;
+    
+    .content-row {
+      display: flex;
+      
+      // 左侧图标
+      .token-image-container {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .token-image {
+          width: 80px;
+          height: 80px;
+          border-radius: 8px;
+        }
+      }
+      
+      // 中间统计数据
+      .token-stats {
+        width: 50%;
+        padding: 0 8px;
+        
+        .stats-container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          
+          .stats-row {
+            display: flex;
+            margin-bottom: 4px;
+            
+            .stat-item {
+              background-color: rgba(33, 52, 71, 0.7);
+              border-radius: 4px;
+              padding: 4px 8px;
+              margin-right: 4px;
+              display: flex;
+              align-items: center;
+              
+              .stat-label {
+                color: #999;
+                margin-right: 4px;
+                font-size: 16px;
+              }
+              
+              .stat-value {
+                font-weight: bold;
+                font-size: 16px;
+                
+                &.green {
+                  color: #4ade80;
+                }
+                
+                &.yellow {
+                  color: #facc15;
+                }
+                
+                &.red {
+                  color: #f87171;
+                }
+              }
+              
+              .stat-icon-container {
+                display: flex;
+                align-items: center;
+              }
+            }
+          }
+        }
+      }
+      
+      // 右侧图表
+      .chart-section {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .chart-container {
+          height: 60px;
+          background-color: #213447;
+          border-radius: 4px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .percent-change {
+          background-color: rgba(33, 52, 71, 0.7);
+          border-radius: 4px;
+          padding: 4px;
+          margin-top: 4px;
+          text-align: center;
+          
+          .green {
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 20px;
+          }
+          
+          .red {
+            color: #f87171;
+            font-weight: bold;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    
+    // 底部部分
+    .bottom-section {
+      margin-top: 12px;
+      
+      .bottom-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        
+        // 进度条部分
+        .progress-section {
+          width: 66%;
+          padding-right: 8px;
+          
+          .progress-item {
+            margin-bottom: 8px;
+            
+            .progress-header {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 4px;
+              
+              .time-frame, .progress-percent {
+                color: #999;
+                font-size: 16px;
+              }
+            }
+            
+            .progress-bar-bg {
+              background-color: #333;
+              height: 6px;
+              border-radius: 3px;
+              overflow: hidden;
+              
+              .progress-bar-green {
+                background-color: #4ade80;
+                height: 100%;
+              }
+              
+              .progress-bar-yellow {
+                background-color: #facc15;
+                height: 100%;
+              }
+            }
+          }
+        }
+        
+        // 价格部分
+        .price-section {
+          width: 34%;
+          display: flex;
+          align-items: flex-end;
+          
+          .price-badge {
+            width: 100%;
+            height: 70%;
+            background: linear-gradient(270deg, #02CB7D 0%, #76F640 100%);
+            border-radius: 8px;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .price-icon {
+              margin-right: 4px;
+              width: 24px;
+              height: 24px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              
+              .price-icon-image {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            
+            .price-text {
+              color: white;
+              font-weight: bold;
+              font-size: 20px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+    }
+  }
+}

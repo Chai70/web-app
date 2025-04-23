@@ -1,0 +1,52 @@
+/* K线图容器样式 */
+.k-line-chart {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 确保K线图在TokenCard中正确显示 */
+.chart-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+  .k-line-chart {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* 占位样式 */
+.chart-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* 简化版K线图样式 */
+.simple-kline {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  .kline-bar {
+    flex: 1;
+    height: 80%;
+    margin: 0 1px;
+    border-radius: 1px;
+    
+    &.up {
+      background-color: #26a69a;
+    }
+    
+    &.down {
+      background-color: #ef5350;
+    }
+  }
+}

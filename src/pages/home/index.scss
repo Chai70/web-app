@@ -3,44 +3,25 @@
   background-color: #000000;
   min-height: 100vh;
   
-  // 顶部跑马灯
-  .notice-bar {
-    display: flex;
-    align-items: center;
-    background-color: #fff7e6;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    
-    .notice-icon {
-      font-size: 25px;
-      margin-right: 10px;
-    }
-    
-    .notice-content {
-      flex: 1;
-      overflow: hidden;
-      
-      .notice-text {
-        white-space: nowrap;
-        color: #fa8c16;
-        font-size: 25px;
-      }
-    }
-  }
   
   // 轮播图
   .banner-swiper {
-    height: 350px;
+    height: 300px;
     margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
     
     .banner-item {
       position: relative;
       width: 100%;
       height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       
       .banner-image {
         width: 100%;
         height: 100%;
+        object-fit: contain;
       }
       
       .banner-title {
@@ -55,6 +36,38 @@
         font-weight: bold;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
+      }
+    }
+  }
+  
+  // 创建按钮容器
+  .create-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 10px;
+  }
+  
+  // 创建按钮
+  .create-button {
+    width: 50%;
+    background: linear-gradient(270deg,#02CB7D 0%, #76F640 100%);
+    color: #fff;
+    border-radius: 16px;
+  }
+  
+  // 卡片区域
+  .token-cards {
+    margin: 0 10px;
+    
+    // 空状态
+    .empty-state {
+      text-align: center;
+      padding: 40px 0;
+      
+      .empty-text {
+        color: #999;
+        font-size: 14px;
       }
     }
   }
@@ -104,6 +117,35 @@
       padding: 20px 0;
       text-align: center;
       color: #999;
+    }
+    
+    // 筛选框样式
+    .filters {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      
+      .filter-picker {
+        flex: 1;
+        margin: 0 5px;
+        
+        &:first-child {
+          margin-left: 0;
+        }
+        
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      
+      .picker-item {
+        background-color: #213447;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+      }
     }
   }
 }

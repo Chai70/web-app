@@ -1,0 +1,45 @@
+/* 添加跑马灯样式 - Taro适配版 */
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    border-radius: 8px;
+  }
+  
+  .ticker {
+    display: inline-block;
+    white-space: nowrap;
+    /* Taro中使用animation属性 */
+    animation: ticker 60s linear infinite;
+  }
+  
+  .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 30px;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .ticker-item.up {
+    color: #4ade80;
+  }
+  
+  .ticker-item.down {
+    color: #f87171;
+  }
+  
+  .ticker-item.neutral {
+    color: #d1d5db;
+  }
+  
+  /* Taro支持的关键帧动画 */
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
